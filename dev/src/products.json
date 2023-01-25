@@ -1,0 +1,35 @@
+[
+  {
+    "id": 1,
+    "title": "Apple iPhone 14, 128GB Storage, 8GB Memory",
+    "brand": "Apple",
+    "description": "Telefono Inteligente con capacidades extraordinarias",
+    "category": "Celulares",
+    "price": 1100,
+    "thumbnail": "https://www.apple.com/newsroom/images/product/iphone/geo/Apple-iPhone-14-iPhone-14-Plus-2up-purple-220907-geo_inline.jpg.large.jpg",
+    "code": "#gr6tr1gdfg1r",
+    "stock": 100
+  },
+  {
+    "id": 2,
+    "title": "Samsung Galaxy A71, 128GB Storage, 6GB Memory",
+    "brand": "Samsung",
+    "description": "Telefono Inteligente con intermedias capacidades",
+    "category": "Celulares",
+    "price": 600,
+    "thumbnail": "https://www.aquillamas.com/wp-content/uploads/2020/07/samsung_a71_1-2.jpg",
+    "code": "#1d5aewq3a3sd",
+    "stock": 35
+  },
+  {
+    "id": 3,
+    "title": "Xiaomi Mi 11, 128GB Storage, 6GB Memory",
+    "brand": "Apple",
+    "description": "Telefono Inteligente con excelentes capacidades",
+    "category": "Celulares",
+    "price": 800,
+    "thumbnail": "https://exitocol.vtexassets.com/arquivos/ids/7466419/celular-xiaomi-mi-11-lite-128gb-8gb-ram-azul.jpg",
+    "code": "#yewf49a5wem2",
+    "stock": 75
+  }
+]

@@ -1,0 +1,65 @@
+div.SearchBar {
+  position: relative;
+  margin: 0 5px;
+  form {
+    display: none;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    width: max-content;
+    height: 35px;
+    border-radius: 15px;
+    overflow: hidden;
+
+    input.searchInput {
+      padding: 5px 10px;
+      height: 100%;
+      width: 200px;
+      border: none;
+      background-color: transparent;
+      outline: none;
+    }
+    button.searchButton {
+      display: none;
+    }
+  }
+
+  button.btn {
+    margin: 0 5px;
+    height: 18px;
+    width: 18px;
+  }
+}
+div.SearchBar {
+  form.active {
+    display: flex;
+    background-color: white;
+    border: 1px solid gray;
+
+    button.searchButton {
+      display: block;
+    }
+  }
+}
+@media (min-width: 768px) {
+  div.SearchBar {
+    position: static;
+
+    button.SearchBarStatus {
+      display: none;
+    }
+
+    form {
+      display: flex;
+      position: static;
+      background-color: white;
+      border: 1px solid gray;
+
+      button.searchButton {
+        display: block;
+      }
+    }
+  }
+}

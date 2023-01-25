@@ -1,0 +1,30 @@
+div.ItemCounter {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+
+  button {
+    padding: 7px;
+    height: 35px;
+    width: 35px;
+    cursor: pointer;
+    border: 1px solid gray;
+
+    &:nth-child(1) {
+      border-radius: 5px 0 0 5px;
+    }
+    &:nth-child(3) {
+      border-radius: 0 5px 5px 0;
+    }
+    svg {
+      width: 100%;
+    }
+  }
+  input {
+    height: 35px;
+    width: calc(100% - 70px);
+    text-align: center;
+    outline: none;
+  }
+}

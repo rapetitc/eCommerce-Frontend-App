@@ -1,0 +1,16 @@
+a.TitlePage {
+  display: flex;
+  align-items: center;
+  height: 50px;
+  width: min-content;
+  color: rgb(68, 68, 68);
+  font-size: 18px;
+  text-decoration: none;
+
+  > * {
+    padding: 0 5px;
+  }
+  img {
+    height: 50%;
+  }
+}

@@ -1,0 +1,34 @@
+[
+  {
+    "id": 0,
+    "username": "admor",
+    "password": "admor",
+    "email": "admor@test.com",
+    "fname": "Admor",
+    "lname": "Admor"
+  },
+  {
+    "id": 1,
+    "username": "ronrod",
+    "password": "ronrod",
+    "email": "ronaldo_rodriguez@test.com",
+    "fname": "Ronaldo",
+    "lname": "Rodriguez"
+  },
+  {
+    "id": 2,
+    "username": "alefer",
+    "password": "alefer",
+    "email": "alejandra_fernandez@test.com",
+    "fname": "Ale",
+    "lname": "Fernandez"
+  },
+  {
+    "id": 3,
+    "username": "marros",
+    "password": "marros",
+    "email": "maria_rosales@test.com",
+    "fname": "Maria",
+    "lname": "Rosales"
+  }
+]

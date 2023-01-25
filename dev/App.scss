@@ -1,0 +1,103 @@
+/* *******************************
+******** GENERAL SETTINGS ********
+******************************* */
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cookie&display=swap");
+
+:root {
+  scroll-behavior: smooth;
+
+  --base-bgcolor: rgb(225, 248, 48);
+  --baseBody-bgcolor: rgb(240, 240, 240);
+  --baseContainer-bgcolor: rgb(255, 255, 255);
+
+  --font-base-color: rgb(60, 60, 60);
+  --font-base-color-hover: rgb(80, 80, 80);
+  --font-base-color-active: rgb(255, 255, 255);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--baseBody-bgcolor);
+  font-family: "Comfortaa", cursive;
+}
+
+h1 {
+  font-family: "Cookie", cursive;
+}
+
+/* Estilos de botones */
+button.btn,
+a.btn {
+  margin: 0 2px;
+  font-size: 14px;
+  color: var(--font-base-color);
+
+  &:hover {
+    color: var(--font-base-color-hover);
+  }
+  &:active {
+    color: var(--font-base-color-active);
+  }
+}
+button.btn {
+  height: 35px;
+  width: 35px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+
+  svg {
+    width: max-content;
+  }
+}
+a.btn {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+/* Estilos de botones */
+
+.container {
+  margin: 0 auto;
+  min-height: 50px;
+  width: 100%;
+  background-color: var(--baseContainer-bgcolor);
+}
+
+@media (min-width: 576px) {
+  .container {
+    width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1320px;
+  }
+}

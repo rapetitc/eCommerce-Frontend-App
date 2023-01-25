@@ -1,0 +1,63 @@
+div.ItemListContainer {
+  padding: 5px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+
+  > p {
+    width: 100%;
+    text-align: right;
+  }
+  a.item {
+    margin: 5px;
+    height: 300px;
+    width: calc(175px - 10px);
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    text-decoration: none;
+    color: rgb(50, 50, 50);
+    cursor: pointer;
+    overflow: hidden;
+
+    &:hover > div.itemImg > img {
+      transform: scale(110%);
+    }
+
+    div.itemImg {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      width: 100%;
+      height: 50%;
+      background-color: rgb(231, 231, 231);
+      overflow: hidden;
+
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        transition: transform 0.5s;
+      }
+    }
+    div.itemBody {
+      padding: 5px;
+
+      h3.item-title {
+        font-size: 16px;
+      }
+      p.item-price {
+        font-size: 18px;
+        text-decoration: line-through;
+      }
+      p.item-offer {
+        font-size: 20px;
+        font-weight: bolder;
+        color: rgb(129, 188, 40);
+      }
+    }
+  }
+}
+
+/* @media (min-width: 768px) {
+}
+ */
