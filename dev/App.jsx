@@ -14,7 +14,6 @@ import Cart from "./Pages/Cart/Cart";
 import ItemDetailed from "./Pages/ItemDetailed/ItemDetailed";
 import Search from "./Pages/Search/Search.jsx";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
-import Category from "./Pages/Category/Category";
 
 const App = () => {
   return (
