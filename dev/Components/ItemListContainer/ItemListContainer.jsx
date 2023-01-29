@@ -7,9 +7,11 @@ import db from "../../src/db";
 const ItemListContainer = () => {
   const [productItems, setProductItems] = useState([]);
 
-  db.getItemsFrom("products", (data) => {
-    setProductItems(data);
-  });
+  useEffect(() => {
+    db.getItemsFrom("products").then((data) => {
+      setProductItems(data);
+    });
+  }, [productItems]);
 
   return (
     <div className='ItemListContainer'>

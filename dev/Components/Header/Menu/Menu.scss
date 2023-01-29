@@ -1,4 +1,4 @@
-nav.menu {
+nav.Menu {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -39,7 +39,7 @@ nav.active {
 }
 
 @media (min-width: 768px) {
-  nav.menu {
+  nav.Menu {
     height: max-content;
     width: max-content;
   }

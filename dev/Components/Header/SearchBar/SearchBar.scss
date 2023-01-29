@@ -1,6 +1,7 @@
 div.SearchBar {
   position: relative;
-  margin: 0 5px;
+  height: 45px;
+
   form {
     display: none;
     flex-wrap: wrap;
@@ -8,44 +9,43 @@ div.SearchBar {
     justify-content: flex-end;
     position: absolute;
     right: 0;
-    width: max-content;
-    height: 35px;
-    border-radius: 15px;
+    width: 100vw;
+    height: 100%;
     overflow: hidden;
 
     input.searchInput {
       padding: 5px 10px;
       height: 100%;
-      width: 200px;
+      width: calc(100% - 56px);
       border: none;
       background-color: transparent;
       outline: none;
     }
+
     button.searchButton {
       display: none;
     }
   }
+  form.active {
+    display: flex;
+    background-color: white;
 
+    button.searchButton {
+      display: block;
+    }
+  }
   button.btn {
     margin: 0 5px;
     height: 18px;
     width: 18px;
   }
 }
-div.SearchBar {
-  form.active {
-    display: flex;
-    background-color: white;
-    border: 1px solid gray;
 
-    button.searchButton {
-      display: block;
-    }
-  }
-}
 @media (min-width: 768px) {
   div.SearchBar {
     position: static;
+    width: calc(80% - 170px - 300px);
+    height: 40px;
 
     button.SearchBarStatus {
       display: none;
@@ -54,8 +54,14 @@ div.SearchBar {
     form {
       display: flex;
       position: static;
+      width: 100%;
       background-color: white;
       border: 1px solid gray;
+      border-radius: 15px;
+
+      input.searchInput {
+        width: calc(100% - 28px);
+      }
 
       button.searchButton {
         display: block;

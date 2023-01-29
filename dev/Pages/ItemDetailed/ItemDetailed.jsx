@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import "./ItemDetailed.scss";
 
 import db from "../../src/db";
@@ -11,7 +11,7 @@ const ItemDetailed = () => {
   const [product, setProduct] = useState({});
 
   useEffect(() => {
-    db.getItemByIdFrom(parseInt(id), "products", (data) => {
+    db.getItemByIdFrom(parseInt(id), "products").then((data) => {
       setProduct(data);
     });
   }, []);
@@ -24,7 +24,9 @@ const ItemDetailed = () => {
             <img src={product.thumbnail} alt={product.title} />
           </div>
           <div className='productDetails'>
-            <p>Categoria: {product.category}</p>
+            <p>
+              Categoria: <Link to={"/search?category=" + product.category}>{product.category}</Link>
+            </p>
             <h3>{product.title}</h3>
             <p>{product.description}</p>
             <p>Disponibilidad: {product.stock}</p>

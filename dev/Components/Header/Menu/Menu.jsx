@@ -9,7 +9,7 @@ const Menu = ({ menuStatus }) => {
   const { CUT } = useContext(UserLogInContext);
 
   return (
-    <nav className={menuStatus ? "menu active" : "menu"}>
+    <nav className={menuStatus ? "Menu active" : "Menu"}>
       <ul>
         {!CUT.token ? (
           <>

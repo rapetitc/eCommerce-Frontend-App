@@ -10,7 +10,7 @@ const Header = () => {
   const [menuStatus, setMenuStatus] = useState(false);
 
   return (
-    <header className='header'>
+    <header className='Header'>
       <div>
         <MenuController menuStatus={menuStatus} setMenuStatus={setMenuStatus} />
         <TitlePage />

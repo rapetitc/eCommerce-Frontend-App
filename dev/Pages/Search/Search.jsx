@@ -1,11 +1,19 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useSearchParams } from "react-router-dom";
 import "./Search.scss";
 
 const Search = () => {
-  const { value } = useParams();
+  let [searchParams, setSearchParams] = useSearchParams();
 
-  return <div className='Search container'>Searching: {value}</div>;
+  return (
+    <div className='Search container'>
+      <h4>Searching:</h4>
+      <ul>
+        <li>Titulo: {searchParams.get("title")}</li>
+        <li>Categoria: {searchParams.get("category")}</li>
+      </ul>
+    </div>
+  );
 };
 
 export default Search;

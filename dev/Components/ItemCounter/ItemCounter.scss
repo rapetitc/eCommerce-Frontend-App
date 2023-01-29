@@ -3,6 +3,8 @@ div.ItemCounter {
   flex-wrap: nowrap;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  max-width: 200px;
 
   button {
     padding: 7px;

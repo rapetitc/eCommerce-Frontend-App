@@ -14,6 +14,7 @@ import Cart from "./Pages/Cart/Cart";
 import ItemDetailed from "./Pages/ItemDetailed/ItemDetailed";
 import Search from "./Pages/Search/Search.jsx";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
+import Category from "./Pages/Category/Category";
 
 const App = () => {
   return (
@@ -26,11 +27,9 @@ const App = () => {
         <Route path='/signin' element={<SignIn />}></Route>
         <Route path='/profile' element={<Profile />}></Route>
         <Route path='/cart' element={<Cart />}></Route>
+        <Route path='/search' element={<Search />}></Route>
         <Route path='/product'>
           <Route path=':id' element={<ItemDetailed />}></Route>
-        </Route>
-        <Route path='/search'>
-          <Route path=':value' element={<Search />}></Route>
         </Route>
         <Route path='*' element={<PageNotFound />}></Route>
       </Routes>

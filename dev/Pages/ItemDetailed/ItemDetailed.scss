@@ -23,7 +23,9 @@ div.ItemDetailed {
       width: 100%;
       border: 1px solid lightgray;
       border-radius: 5px;
-
+      > * {
+        margin: 5px 0;
+      }
       div.productDetails-Buttons {
         padding: 10px 5px;
         display: flex;
@@ -32,11 +34,24 @@ div.ItemDetailed {
     }
   }
 }
+
 @media (min-width: 768px) {
   div.ItemDetailed {
     div.productContainer {
       div.productPreview {
         margin-right: 5px;
+        width: calc(60% - 5px);
+      }
+      div.productDetails {
+        width: 40%;
+      }
+    }
+  }
+}
+@media (min-width: 992px) {
+  div.ItemDetailed {
+    div.productContainer {
+      div.productPreview {
         width: calc(65% - 5px);
       }
       div.productDetails {

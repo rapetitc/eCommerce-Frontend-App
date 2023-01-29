@@ -1,17 +1,36 @@
-import React, { useState, useContext } from "react";
+import React, { useState, useEffect, useContext } from "react";
 import "./Cart.scss";
 
 import { CartContext } from "../../Context/CartContext";
 
 import EmptyCart from "./EmptyCart/EmptyCart";
 import UnemptiedCart from "./UnemptiedCart/UnemtiedCart";
+import { useNavigate } from "react-router-dom";
 
 const Cart = () => {
-  const { cart } = useContext(CartContext);
+  const { cart, getFullCartDetails } = useContext(CartContext);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [fullCart, setFullCart] = useState([]);
+  const navigate = useNavigate()
+
+  const handlerCheckout = () => {
+    navigate('/checkout')
+  };
+
+  useEffect(() => {
+    getFullCartDetails().then((data) => {
+      let totalPriceCounter = 0;
+      data.forEach(({ price, quantity }) => {
+        totalPriceCounter += parseInt(price * quantity);
+      });
+      setTotalPrice(totalPriceCounter);
+      setFullCart(data);
+    });
+  }, [cart]);
 
   return (
     <div className='Cart container'>
-      <div className='section summary'>
+      <div className='section'>
         <div className='sectionHeader'>
           <div className='sectionHeaderTitle'>
             <svg xmlns='http://www.w3.org/2000/svg' fill='currentColor' className='bi bi-card-list' viewBox='0 0 16 16'>
@@ -21,10 +40,15 @@ const Cart = () => {
             <h3>Resumen de la orden</h3>
           </div>
         </div>
-        {cart.length > 0 ? <UnemptiedCart /> : <EmptyCart />}
-        <div className='sectionFooter'>
-          <button>Continuar</button>
-        </div>
+        <div className='sectionBody'>{fullCart.length > 0 ? <UnemptiedCart fullCart={fullCart} /> : <EmptyCart />}</div>
+        {fullCart.length > 0 ? (
+          <div className='sectionFooter'>
+            <p>Total a pagar: ${totalPrice}</p>
+            <div>
+              <button onClick={handlerCheckout}>Continuar</button>
+            </div>
+          </div>
+        ) : null}
       </div>
     </div>
   );

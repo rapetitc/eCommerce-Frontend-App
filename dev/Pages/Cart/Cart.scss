@@ -6,7 +6,7 @@ div.Cart {
   div.section {
     padding: 5px;
     height: min-content;
-    width: 80%;
+    width: 100%;
     border: 1px solid lightgray;
 
     div.sectionHeader {
@@ -33,40 +33,37 @@ div.Cart {
         margin: 10px;
       }
     }
-    div.sectionBody {
-      div.cartItem {
-        display: flex;
-        flex-wrap: wrap;
-        margin: 5px 0;
+    /* div.sectionBody {
+    } */
+    div.sectionFooter {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      p{
+
         padding: 5px;
-        border-top: 1px solid gray;
+      }
 
-        div.cartItem-ImgPreview {
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          height: 150px;
-          width: 150px;
-          background-color: lightgray;
+      div {
+        display: flex;
+        justify-content: end;
+        padding: 5px;
+        width: 100%;
 
-          img {
-            max-width: 100%;
-            max-height: 100%;
-          }
-        }
-        div.cartItem-Body {
-          padding: 5px 10px;
+        button {
+          padding: 5px;
+          cursor: pointer;
         }
       }
     }
-    div.sectionFooter {
-      display: flex;
-      justify-content: right;
+  }
+}
 
-      button {
-        padding: 5px;
-        cursor: pointer;
-      }
+@media (min-width: 768px) {
+  div.Cart {
+    div.section {
+      width: 80%;
     }
   }
 }
